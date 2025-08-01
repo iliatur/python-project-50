@@ -1,6 +1,15 @@
 import argparse
 
 
+def generate_diff(path1, path2, formatter='stylish'):
+    data1 = parse_file(path1)
+    data2 = parse_file(path2)
+    
+    diff_tree = build_diff_tree(data1, data2)
+    formatter = get_formatter(formatter)
+    return formatter(diff_tree)
+
+
 def main():
     parser = argparse.ArgumentParser(
         prog="gendiff",
