@@ -8,7 +8,7 @@ from gendiff.scripts.gendiff import generate_diff
 FIXTURES_DIR = "tests/test_data"
 
 
-def load_test_data(name):
+def load_fixture(name):
     path = os.path.join(FIXTURES_DIR, name)
     with open(path, 'r') as f:
         return f.read().strip() 
@@ -25,7 +25,7 @@ def load_test_data(name):
 def test_generate_diff(file1, file2, formatter, expected_file):
     path1 = os.path.join(FIXTURES_DIR, file1)
     path2 = os.path.join(FIXTURES_DIR, file2)
-    expected = load_test_data(expected_file)
+    expected = load_fixture(expected_file)
 
     result = generate_diff(path1, path2, formatter=formatter)
     assert result == expected
