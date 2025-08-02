@@ -18,3 +18,12 @@ packages = ["gendiff"]
 
 [project.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
+
+[dependency-groups]
+dev = [
+    "coverage>=7.9.2",
+    "pysonar>=1.1.0.2035",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+    "ruff>=0.12.2",
+]
