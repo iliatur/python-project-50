@@ -4,7 +4,6 @@ import pytest
 
 from gendiff.scripts.gendiff import generate_diff
 
-
 FIXTURES_DIR = "tests/test_data"
 
 
