@@ -1,6 +1,6 @@
 import os
 
-from gendiff.parser import parse_file
+from gendiff.scripts.parser import parse_file
 
 
 def test_parse_json():
