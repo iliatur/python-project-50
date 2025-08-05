@@ -1,7 +1,8 @@
 import argparse
 
-from gendiff.scripts.diff import build_diff_tree
+
 from gendiff.formatters import get_formatter
+from gendiff.scripts.diff import build_diff_tree
 from gendiff.scripts.parser import parse_file
 
 
